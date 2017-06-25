@@ -1,0 +1,86 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Бирюзовое Платье",
+      "description": "Good one to wear at celebrations",
+      "year": 2017,
+      "color": ["Sea", "Light blue"],
+      "sizes": ["S", "M", "L"],
+      "material": {
+        "Polyester": 70,
+        "Viscosus": 30
+      },
+      "published": true,
+      "sales": false,
+      "new": true,
+      "image": "sea-dress.jpg",
+      "price": 900
+    },
+    {
+      "id": 2,
+      "title": "Синий Свитер",
+      "description": "Nice stylish sweater for cold autumn",
+      "year": 2017,
+      "color": "Blue",
+      "sizes": ["S", "M", "L"],
+      "material": {
+        "Polyester": 70,
+        "Viscosus": 30
+      },
+      "published": true,
+      "sales": false,
+      "new": true,
+      "image": "blue-sweater-with-flowers.jpg",
+      "price": 600
+    },
+    {
+      "id": 3,
+      "title": "Светлое Пальто",
+      "description": "Description goes here...",
+      "year": 2017,
+      "color": "Blue",
+      "sizes": ["M", "L"],
+      "material": {
+        "Viscosus": 100
+      },
+      "published": true,
+      "sales": false,
+      "new": true,
+      "image": "light-blue-pink-coat.jpg",
+      "price": 1400
+    },
+    {
+      "id": 4,
+      "title": "Розовый Гольф",
+      "description": "Lorem ipsum dolor sit amet.",
+      "year": 2017,
+      "color": "Pink",
+      "sizes": ["S", "M"],
+      "material": {
+        "Viscosus": 100
+      },
+      "published": true,
+      "sales": false,
+      "new": true,
+      "image": "golf-pink.jpg",
+      "price": 400
+    },
+    {
+      "id": 5,
+      "title": "Синее платье в клетку",
+      "description": "Lorem ipsum dolor sit amet.",
+      "year": 2016,
+      "color": "Blue",
+      "sizes": ["XS", "S", "M"],
+      "material": {
+        "Polyester": 100
+      },
+      "published": true,
+      "sales": false,
+      "new": true,
+      "image": "blue-dress.jpg",
+      "price": 1200
+    }
+  ]
+}
