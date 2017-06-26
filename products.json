@@ -4,26 +4,27 @@
       "id": 1,
       "title": "Бирюзовое Платье",
       "description": "Good one to wear at celebrations",
-      "year": 2017,
       "color": ["Sea", "Light blue"],
       "sizes": ["S", "M", "L"],
+      "type": "Dress",
       "material": {
         "Polyester": 70,
         "Viscosus": 30
       },
       "published": true,
-      "sales": false,
-      "new": true,
+      "sales": true,
+      "new": false,
       "image": "sea-dress.jpg",
-      "price": 900
+      "price": 900,
+      "discount": 25
     },
     {
       "id": 2,
       "title": "Синий Свитер",
       "description": "Nice stylish sweater for cold autumn",
-      "year": 2017,
       "color": "Blue",
       "sizes": ["S", "M", "L"],
+      "type": "Sweater",
       "material": {
         "Polyester": 70,
         "Viscosus": 30
@@ -32,15 +33,16 @@
       "sales": false,
       "new": true,
       "image": "blue-sweater-with-flowers.jpg",
-      "price": 600
+      "price": 600,
+      "discount": 0
     },
     {
       "id": 3,
       "title": "Светлое Пальто",
-      "description": "Description goes here...",
-      "year": 2017,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, maxime velit? Dolore earum excepturi, nihil quas recusandae sint vitae. Provident, sint soluta! Aspernatur delectus deserunt dignissimos esse est, facilis illo illum in perferendis quis rem totam velit veniam? Animi aspernatur dicta quam quis quo! Architecto consequuntur distinctio dolor eveniet fuga incidunt libero, maiores, neque possimus sed, similique velit veniam voluptates?",
       "color": "Blue",
       "sizes": ["M", "L"],
+      "type": "Coat",
       "material": {
         "Viscosus": 100
       },
@@ -48,31 +50,33 @@
       "sales": false,
       "new": true,
       "image": "light-blue-pink-coat.jpg",
-      "price": 1400
+      "price": 1400,
+      "discount": 0
     },
     {
       "id": 4,
       "title": "Розовый Гольф",
       "description": "Lorem ipsum dolor sit amet.",
-      "year": 2017,
       "color": "Pink",
       "sizes": ["S", "M"],
+      "type": "Golf",
       "material": {
         "Viscosus": 100
       },
       "published": true,
-      "sales": false,
-      "new": true,
+      "sales": true,
+      "new": false,
       "image": "golf-pink.jpg",
-      "price": 400
+      "price": 400,
+      "discount": 20
     },
     {
       "id": 5,
       "title": "Синее платье в клетку",
       "description": "Lorem ipsum dolor sit amet.",
-      "year": 2016,
       "color": "Blue",
       "sizes": ["XS", "S", "M"],
+      "type": "Dress",
       "material": {
         "Polyester": 100
       },
@@ -80,7 +84,25 @@
       "sales": false,
       "new": true,
       "image": "blue-dress.jpg",
-      "price": 1200
+      "price": 1200,
+      "discount": 0
+    },
+    {
+      "id": 6,
+      "title": "Белая блузка",
+      "description": "Супер пупер блузка",
+      "color": "Pink",
+      "sizes": ["XS", "S", "M"],
+      "type": "Blouse",
+      "material": {
+        "Polyester": 100
+      },
+      "published": true,
+      "sales": true,
+      "new": false,
+      "image": "pink-skirt.jpg",
+      "price": 450,
+      "discount": 10
     }
   ]
 }
