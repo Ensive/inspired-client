@@ -9,7 +9,8 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    publicPath: '/public/'
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.webpack.js', '.scss']
@@ -40,8 +41,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader'
-      },
-
+      }
     ]
   }
 };

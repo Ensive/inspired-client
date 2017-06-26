@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+
+.MenuWrapper {
+  background-color: $white;
+  border-top: 1px solid #f3f3f3;
+  min-height: 51px;
+}
+
+.Menu {
+  font-size: 0;
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 20px;
+  text-align: left;
+
+  @media only screen and (min-width: $small-screen-up) {
+    text-align: center;
+  }
+}
+
+.MenuLink {
+  color: $base-color;
+  display: block;
+  font-family: $oswald;
+  line-height: 51px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .2s ease, padding .2s ease;
+  width: 100%;
+
+  &:first-child { padding-left: 0; }
+  &:last-child { padding-right: 0; }
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+
+    .MenuText::before {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: $small-screen-up) {
+    display: inline-block;
+    width: auto;
+    padding: 0 17px;
+  }
+
+  @media only screen and (min-width: $medium-screen-up) {
+    padding: 0 50px;
+  }
+
+  @media only screen and (min-width: $large-screen-up) {
+    padding: 0 80px;
+  }
+}
+
+.MenuText {
+  display: block;
+  height: 100%;
+  letter-spacing: 0.7px;
+  position: relative;
+  transform-origin: 0 0;
+
+  &::before {
+    background: $primary-color none repeat scroll 0 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: -2px;
+    transform: translateY(0.5px) translateZ(0px);
+    transition: all 0.3s ease 0s;
+    width: 0;
+    z-index: 1;
+  }
+}

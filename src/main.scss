@@ -1,0 +1,54 @@
+@import 'styles/variables';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: $base-color;
+  font-family: $roboto;
+  line-height: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $base-color;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1680px;
+  padding: 0 20px;
+}
+
+// clearfix
+.u-clear {
+  zoom: 1;
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.u-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@import 'styles/text';

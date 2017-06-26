@@ -9,5 +9,7 @@
       "modules": false
     }]
   ],
-  "plugins": []
+  "plugins": [
+    "babel-plugin-transform-class-properties"
+  ]
 }
