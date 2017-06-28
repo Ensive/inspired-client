@@ -2,106 +2,118 @@
   "products": [
     {
       "id": 1,
+      "sku": "23Hdj41dnc72ldm",
       "title": "Бирюзовое Платье",
       "description": "Good one to wear at celebrations",
-      "color": ["Sea", "Light blue"],
+      "color": "Sea",
       "sizes": ["S", "M", "L"],
-      "type": "Dress",
-      "material": {
-        "Polyester": 70,
-        "Viscosus": 30
-      },
-      "published": true,
-      "sales": true,
+      "category": "Dress",
+      "type": "Cocktail",
+      "materials": [
+        { "Polyester": 70 },
+        { "Viscosus": 30 }
+      ],
+      "available": true,
       "new": false,
       "image": "sea-dress.jpg",
       "price": 900,
+      "discount_available": true,
       "discount": 25
     },
     {
       "id": 2,
+      "sku": "23Hdj41dnc72ldm",
       "title": "Синий Свитер",
       "description": "Nice stylish sweater for cold autumn",
       "color": "Blue",
       "sizes": ["S", "M", "L"],
-      "type": "Sweater",
-      "material": {
-        "Polyester": 70,
-        "Viscosus": 30
-      },
-      "published": true,
-      "sales": false,
+      "category": "Sweater",
+      "type": "Cocktail",
+      "materials": [
+        { "Polyester": 70 },
+        { "Viscosus": 30 }
+      ],
+      "available": true,
       "new": true,
       "image": "blue-sweater-with-flowers.jpg",
       "price": 600,
+      "discount_available": false,
       "discount": 0
     },
     {
       "id": 3,
+      "sku": "23Hdj41dnc72ldm",
       "title": "Светлое Пальто",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, maxime velit? Dolore earum excepturi, nihil quas recusandae sint vitae. Provident, sint soluta! Aspernatur delectus deserunt dignissimos esse est, facilis illo illum in perferendis quis rem totam velit veniam? Animi aspernatur dicta quam quis quo! Architecto consequuntur distinctio dolor eveniet fuga incidunt libero, maiores, neque possimus sed, similique velit veniam voluptates?",
       "color": "Blue",
       "sizes": ["M", "L"],
-      "type": "Coat",
-      "material": {
-        "Viscosus": 100
-      },
-      "published": true,
-      "sales": false,
+      "category": "Coat",
+      "type": "Cocktail",
+      "materials": [
+        { "Viscosus": 100 }
+      ],
+      "available": true,
       "new": true,
       "image": "light-blue-pink-coat.jpg",
       "price": 1400,
+      "discount_available": false,
       "discount": 0
     },
     {
       "id": 4,
+      "sku": "23Hdj41dnc72ldm",
       "title": "Розовый Гольф",
       "description": "Lorem ipsum dolor sit amet.",
       "color": "Pink",
       "sizes": ["S", "M"],
-      "type": "Golf",
-      "material": {
-        "Viscosus": 100
-      },
-      "published": true,
-      "sales": true,
+      "category": "Golf",
+      "type": "Cocktail",
+      "materials": [
+        { "Viscosus": 100 }
+      ],
+      "available": true,
       "new": false,
       "image": "golf-pink.jpg",
       "price": 400,
+      "discount_available": true,
       "discount": 20
     },
     {
       "id": 5,
+      "sku": "23Hdj41dnc72ldm",
       "title": "Синее платье в клетку",
       "description": "Lorem ipsum dolor sit amet.",
       "color": "Blue",
       "sizes": ["XS", "S", "M"],
-      "type": "Dress",
-      "material": {
-        "Polyester": 100
-      },
-      "published": true,
-      "sales": false,
+      "category": "Dress",
+      "type": "Cocktail",
+      "materials": [
+        { "Polyester": 100 }
+      ],
+      "available": true,
       "new": true,
       "image": "blue-dress.jpg",
       "price": 1200,
+      "discount_available": false,
       "discount": 0
     },
     {
       "id": 6,
+      "sku": "23Hdj41dnc72ldm",
       "title": "Белая блузка",
       "description": "Супер пупер блузка",
       "color": "Pink",
       "sizes": ["XS", "S", "M"],
-      "type": "Blouse",
-      "material": {
-        "Polyester": 100
-      },
-      "published": true,
-      "sales": true,
+      "category": "Blouse",
+      "type": "Cocktail",
+      "materials": [
+        { "Polyester": 100 }
+      ],
+      "available": true,
       "new": false,
       "image": "pink-skirt.jpg",
       "price": 450,
+      "discount_available": true,
       "discount": 10
     }
   ]
