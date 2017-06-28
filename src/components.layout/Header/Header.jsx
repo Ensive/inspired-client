@@ -31,7 +31,11 @@ function Header({ query, onSearch }) {
 
         <div className="HeaderSocial">
           <Link to="#" className="HeaderSocial__Link Text Text--big icon-facebook-squared" />
-          <Link to="#" className="HeaderSocial__Link Text Text--big icon-instagram" />
+          <Link
+            to="https://www.instagram.com/inspired.brand/"
+            target="_blank"
+            className="HeaderSocial__Link Text Text--big icon-instagram"
+          />
         </div>
       </header>
     </div>
