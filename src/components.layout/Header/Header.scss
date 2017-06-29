@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
 
 .HeaderWrapper {
   background-color: $white;
@@ -17,7 +18,12 @@
 .SearchForm {
   display: block;
   float: left;
-  margin: 20px 0 0 0;
+  margin: 100px 0 0 0;
+  transition: margin .2s ease;
+
+  @include media($medium-screen-up) {
+    margin: 20px 0 0 0;
+  }
 }
 
 .SearchButton {
@@ -89,7 +95,12 @@
 .HeaderSocial {
   display: block;
   float: right;
-  margin: 22px 0 0;
+  margin: 100px 0 0;
+  transition: margin .2s ease;
+
+  @include media($medium-screen-up) {
+    margin: 22px 0 0;
+  }
 }
 
 .HeaderSocial__Link {

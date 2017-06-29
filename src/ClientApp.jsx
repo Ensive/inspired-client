@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 
 // layout
 import Header from './components.layout/Header/Header';
@@ -11,32 +12,34 @@ import Home from './components.pages/Home';
 import Single from './components.pages/Single';
 
 import './main.scss';
-import data from '../products.json';
 
 const FourOhFour = () => <h1>404</h1>;
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    query: '',
+    products: []
+  };
 
-    this.state = {
-      query: '',
-      products: data.products
-    };
-
-    this.onSearch = this.onSearch.bind(this);
+  componentDidMount() {
+    this.getProducts();
   }
 
-  onSearch(event) {
-    const results = data.products.filter(
-      product => `${product.title} ${product.description}`.toUpperCase().indexOf(event.target.value.toUpperCase()) >= 0
+  onSearch = event => {
+    const newValue = event.target.value;
+    const results = this.allProducts.filter(
+      p => `${p.title} ${p.description}`.toUpperCase().indexOf(newValue.toUpperCase()) >= 0
     );
 
-    this.setState({
-      query: event.target.value,
-      products: results
+    this.setState({ query: newValue, products: results });
+  };
+
+  getProducts = () => {
+    axios.get('http://localhost:3001/api/v1/products.json').then(({ data }) => {
+      this.allProducts = data;
+      this.setState({ products: data });
     });
-  }
+  };
 
   render() {
     return (
@@ -46,8 +49,8 @@ class App extends Component {
           <Menu />
           <Switch>
             <Route exact path="/" render={props => <Home products={this.state.products} {...props} />} />
-            <Route exact path="/products" render={props => <Home products={data.products} {...props} />} />
-            <Route path="/products/:id" render={props => <Single products={data.products} {...props} />} />
+            <Route exact path="/products" render={props => <Home products={this.state.products} {...props} />} />
+            <Route path="/products/:id" render={props => <Single products={this.state.products} {...props} />} />
             <Route component={FourOhFour} />
           </Switch>
         </div>

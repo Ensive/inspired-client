@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
 
 .Products {
   margin: 20px -10px 0;
@@ -17,34 +18,26 @@
   transition: width .4s ease-out;
   width: 100%;
 
-  @media only screen and (min-width: $small-screen-up) {
+  @include media($small-screen-up) {
     width: 50%;
     float: left;
   }
 
-  @media only screen and (min-width: $medium-screen-up) {
+  @include media($medium-screen-up) {
     width: 33.33333333333333%;
   }
 
-  @media only screen and (min-width: $large-screen-up) {
+  @include media($large-screen-up) {
     width: 25%;
   }
 
-  @media only screen and (min-width: $xlarge-screen-up) {
+  @include media($xlarge-screen-up) {
     width: 20%;
   }
 
   // animation
-  &.SlideIn-appear {
-    opacity: 0.01;
-    transform: translate(15%, 15%);
-  }
-
-  &.SlideIn-appear-active {
-    opacity: 1;
-    transform: translate(0);
-    transition: opacity .25s ease-in, transform .25s ease-in;
-  }
+  &.SlideIn-enter { opacity: 0.01; transform: translate(15%, 15%); }
+  &.SlideIn-enter-active { opacity: 1; transform: translate(0); transition: opacity .3s ease-in, transform .3s ease-in; }
 
   // animation delay
   @for $i from 1 through 10 {
@@ -52,6 +45,13 @@
       transition-delay: .1s * $i;
     }
   }
+
+  // animation enter & leave
+  //&.SlideIn-enter { opacity: 0.01; transform: scale(0); }
+  //&.SlideIn-enter-active { opacity: 1; transform: scale(1); transition: opacity .3s ease-in, transform .3s ease-in; }
+
+  &.SlideIn-leave { opacity: 1; transform: scale(1); }
+  &.SlideIn-leave-active { opacity: 0; transform: scale(0); transition: opacity .3s ease-in, transform .3s ease-in; }
 }
 
 .ProductMain {

@@ -1,0 +1,13 @@
+@import '../../styles/base/variables';
+
+.LoadingImageWrapper {
+  padding: 100px 20px;
+  background-color: $white;
+  text-align: center;
+}
+
+.LoadingImage {
+  width: 100px;
+  opacity: .75;
+  animation: spinner 3s linear infinite;
+}
