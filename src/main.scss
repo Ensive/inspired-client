@@ -1,4 +1,5 @@
-@import 'styles/variables';
+@import 'styles/base/variables';
+@import 'styles/base/animations';
 
 html {
   font-size: 62.5%;
@@ -51,4 +52,4 @@ a {
   visibility: hidden !important;
 }
 
-@import 'styles/text';
+@import 'styles/reusable/text';

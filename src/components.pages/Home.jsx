@@ -13,11 +13,10 @@ function Home({ products }) {
       <div className="Products u-clear">
         <CSSTransitionGroup
           transitionName="SlideIn"
-          transitionAppear={true}
-          transitionLeave={false}
+          transitionAppear={false}
           transitionAppearTimeout={0}
-          transitionEnterTimeout={100}
-          transitionLeaveTimeout={100}
+          transitionEnterTimeout={0}
+          transitionLeaveTimeout={0}
         >
           {products.map(product => <Product key={product.id} {...product} />)}
         </CSSTransitionGroup>

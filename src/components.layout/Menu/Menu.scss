@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@import '../../styles/base/variables';
+@import '../../styles/base/mixins';
 
 .MenuWrapper {
   background-color: $white;
@@ -13,7 +14,7 @@
   padding: 0 20px;
   text-align: left;
 
-  @media only screen and (min-width: $small-screen-up) {
+  @include media($small-screen-up) {
     text-align: center;
   }
 }
@@ -42,17 +43,17 @@
     }
   }
 
-  @media only screen and (min-width: $small-screen-up) {
+  @include media($small-screen-up) {
     display: inline-block;
     width: auto;
     padding: 0 17px;
   }
 
-  @media only screen and (min-width: $medium-screen-up) {
+  @include media($medium-screen-up) {
     padding: 0 50px;
   }
 
-  @media only screen and (min-width: $large-screen-up) {
+  @include media($large-screen-up) {
     padding: 0 80px;
   }
 }

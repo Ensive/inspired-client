@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { arrayOf, string, number } from 'prop-types';
+import { oneOfType, arrayOf, string, number } from 'prop-types';
 import './Product.scss';
 
 const propTypes = {
   id: number.isRequired,
   title: string.isRequired,
   description: string,
-  price: number.isRequired,
-  image: string.isRequired,
+  price: oneOfType([number, string]).isRequired,
+  image: string,
   sizes: arrayOf(string)
 };
 
 function renderGallery(isSingle, imageUrl, title, id) {
+  if (!imageUrl) imageUrl = 'http://placehold.it/500x500';
   const img = <img src={imageUrl} alt={title} className="ProductImage" />;
   const span = (
     <span className="ProductView Text Text--medium"><span className="Text Text--regular">Смотреть</span></span>
@@ -44,14 +45,14 @@ function Product({ id, title, description, price, image, sizes, isSingle }) {
           <div>
             <h3 className="Text Text--regular">Размеры</h3>
             <div className="ProductSizes">
-              {sizes.map((size, index) =>
-                <a key={index} href="#" className="ProductSize Text Text--regular">{size}</a>
-              )}
+              {/*{sizes.map((size, index) =>*/}
+              {/*<a key={index} href="#" className="ProductSize Text Text--regular">{size}</a>*/}
+              {/*)}*/}
             </div>
           </div>}
 
         <div className="ProductPrice">
-          <span className="Text Text--medium">{price}</span>
+          <span className="Text Text--medium">{parseInt(price, 10)}</span>
           <span className="ProductCurrency Text Text--small">грн</span>
         </div>
         <button className="ProductAdd">

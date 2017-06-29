@@ -2,6 +2,7 @@ import React from 'react';
 import { object, arrayOf } from 'prop-types';
 
 import Product from '../components/Product/Product';
+import Loading from '../components.layout/Loading/Loading';
 
 const propTypes = {
   match: object,
@@ -10,12 +11,12 @@ const propTypes = {
 
 function Single({ match, products }) {
   const id = match.params.id;
-  const product = products.find(product => product.id == id);
+  const product = products.find(product => parseInt(product.id, 10) === parseInt(id, 10));
 
   return (
     <div className="container">
       <div className="Products Products--single u-clear">
-        <Product isSingle {...product} />
+        {product ? <Product isSingle {...product} /> : <Loading />}
       </div>
     </div>
   );
