@@ -1,7 +1,8 @@
 // colors
-$base-color: #212826;
+$base-color: #484848;
 $primary-color: #e893b7;
 $secondary-color: #666;
+$light-gray: lighten($secondary-color, 20%);
 $white: #fff;
 //$primary-color: #AB7189;
 
