@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './Menu.scss';
 
 function Menu() {
@@ -10,16 +9,19 @@ function Menu() {
           <span className="MenuText Text Text--regular">Новинки</span>
         </a>
         <a className="MenuLink" href="#">
-          <span className="MenuText Text Text--regular">Распродажа</span>
+          <span className="MenuText Text Text--regular">Одежда</span>
         </a>
         <a className="MenuLink" href="#">
           <span className="MenuText Text Text--regular">Платья</span>
         </a>
         <a className="MenuLink" href="#">
-          <span className="MenuText Text Text--regular">Блог</span>
+          <span className="MenuText Text Text--regular Text--primary">Sale</span>
         </a>
         <a className="MenuLink" href="#">
           <span className="MenuText Text Text--regular">О Нас</span>
+        </a>
+        <a className="MenuLink" href="#">
+          <span className="MenuText Text Text--regular">Блог</span>
         </a>
       </nav>
     </div>
