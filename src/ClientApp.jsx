@@ -35,7 +35,13 @@ class App extends Component {
   };
 
   getProducts = () => {
-    axios.get('http://localhost:3001/api/v1/products.json').then(({ data }) => {
+    axios({
+      method: 'GET',
+      url: 'http://localhost:3001/api/v1/products.json',
+      headers: {
+        'X-Key-Inflection': 'camel'
+      }
+    }).then(({ data }) => {
       this.allProducts = data;
       this.setState({ products: data });
     });

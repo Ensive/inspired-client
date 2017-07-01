@@ -26,7 +26,7 @@ function Header({ query, onSearch }) {
 
         <div className="HeaderLogo">
           <h1 className="HeaderTitle"><Link className="HeaderLink" to="/">Inspired</Link></h1>
-          <span className="HeaderLabel Text Text--small">by Olga Yatsuk</span>
+          <span className="HeaderLabel Text Text--xsmall">by Olga Yatsuk</span>
         </div>
 
         <div className="HeaderSocial">

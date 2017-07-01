@@ -46,14 +46,18 @@
   @include media($small-screen-up) {
     display: inline-block;
     width: auto;
-    padding: 0 17px;
+    padding: 0 15.5px;
   }
 
   @include media($medium-screen-up) {
-    padding: 0 50px;
+    padding: 0 44px;
   }
 
   @include media($large-screen-up) {
+    padding: 0 65px;
+  }
+
+  @include media($xlarge-screen-up) {
     padding: 0 80px;
   }
 }

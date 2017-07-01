@@ -3,7 +3,6 @@
 
 .Products {
   margin: 20px -10px 0;
-  overflow: hidden;
 }
 
 .Products--single {
@@ -19,8 +18,8 @@
   width: 100%;
 
   @include media($small-screen-up) {
-    width: 50%;
     float: left;
+    width: 50%;
   }
 
   @include media($medium-screen-up) {
@@ -82,8 +81,12 @@
 
 .ProductThumb {
   float: left;
-  margin: 0 20px 0 0;
-  max-width: 110px;
+  margin: 0 3.5% 3.5% 0;
+  width: 31%;
+
+  &:nth-child(3n) {
+    margin: 0 0 3.5%;
+  }
 
   &:last-child {
     margin: 0;
@@ -129,12 +132,63 @@
 }
 
 .ProductDescription {
-  color: $secondary-color;
+  font-weight: 300;
+  color: $light-gray;
   margin: 0 0 20px;
 }
 
+.ProductSizes {
+  margin: 5px 0 20px;
+}
+
+.ProductSize,
+.ProductColor {
+  border: 2px solid $base-color;
+  color: $base-color;
+  display: inline-block;
+  height: 35px;
+  line-height: 31px;
+  margin: 0 5px 0 0;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+  width: 35px;
+  cursor: pointer;
+}
+
+.ProductSize {
+  background-color: $white;
+
+  &.is-active {
+    background-color: $base-color;
+    color: $white;
+  }
+}
+
+.ProductColors,
+.ProductMaterials {
+  margin: 0 0 20px;
+}
+
+.ProductColorsTitle {
+  margin: 0 0 5px;
+}
+
+.ProductColor,
+.ProductMaterial {
+  font-weight: 300;
+}
+
+.ProductColor {
+  text-transform: capitalize;
+  border: 0;
+
+  &--white {
+    border: 2px solid $light-gray;
+  }
+}
+
 .ProductPrice {
-  color: $secondary-color;
   display: block;
   float: left;
   font-weight: 300;
@@ -202,28 +256,6 @@
   z-index: 1;
 }
 
-.ProductSizes {
-  margin: 5px 0 20px;
-}
-
-.ProductSize {
-  border: 2px solid $base-color;
-  color: $base-color;
-  display: inline-block;
-  height: 35px;
-  line-height: 29px;
-  margin: 0 5px 0 0;
-  text-align: center;
-  text-decoration: none;
-  transition: border-color .2s ease, color .2s ease, background-color .2s ease;
-  width: 35px;
-
-  &:hover {
-    background-color: $base-color;
-    color: $white;
-  }
-}
-
 
 // When rendered as a single page
 .Product--single {
@@ -232,32 +264,34 @@
   width: 100%;
 
   .ProductMain {
+    width: 50%;
     float: left;
     max-width: 500px;
     padding: 0;
   }
 
   .ProductInfo {
-    overflow: hidden;
+    width: 50%;
+    float: left;
     padding: 0 0 0 20px;
   }
 
   .ProductDescription {
-    font-weight: 300;
     white-space: normal;
   }
 
   .ProductPrice {
     float: none;
+    line-height: inherit;
   }
 
   .ProductAdd {
     bottom: auto;
     float: none;
     left: auto;
-    margin: 20px auto 0;
-    max-width: 250px;
-    padding: 10px 30px;
+    margin: 20px 0 0;
+    max-width: 220px;
+    //padding: 10px 30px;
     position: relative;
     right: auto;
     top: auto;
