@@ -17,7 +17,13 @@ const propTypes = {
     })
   ),
   isSingle: bool,
-  comments: arrayOf(shape({}))
+  comments: arrayOf(shape({})),
+  material: string,
+  colors: arrayOf(shape({
+    id: number,
+    name: string,
+    value: string.isRequired
+  }))
 };
 
 const PLACEHOLDER_IMAGE = 'http://placehold.it/500x500';
