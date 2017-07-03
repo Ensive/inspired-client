@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
+import moment from 'moment';
 
 // layout
 import Header from './components.layout/Header/Header';
@@ -22,6 +23,7 @@ class App extends Component {
   };
 
   componentDidMount() {
+    moment.locale('ru');
     this.getProducts();
   }
 
