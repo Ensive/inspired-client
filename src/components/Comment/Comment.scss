@@ -2,14 +2,15 @@
 
 // TODO: consider better design for comments section
 .Comments {
-  //border-top: 1px solid lighten(#ccc, 10%);
-  margin: 40px 0 0;
+  padding: 20px;
+  background-color: $white;
+  margin: 20px 0 0;
 }
 
 .CommentsTitle {
   border-bottom: 1px dotted lighten(#ccc, 10%);
   font-family: $oswald;
-  margin: 20px 0;
+  margin: 0 0 20px;
 }
 
 .Comment {

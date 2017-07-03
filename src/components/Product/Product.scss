@@ -132,8 +132,8 @@
 }
 
 .ProductDescription {
-  font-weight: 300;
   color: $light-gray;
+  font-weight: 300;
   margin: 0 0 20px;
 }
 
@@ -145,6 +145,7 @@
 .ProductColor {
   border: 2px solid $base-color;
   color: $base-color;
+  cursor: pointer;
   display: inline-block;
   height: 35px;
   line-height: 31px;
@@ -153,7 +154,6 @@
   text-decoration: none;
   transition: border-color .2s ease, color .2s ease, background-color .2s ease;
   width: 35px;
-  cursor: pointer;
 }
 
 .ProductSize {
@@ -180,8 +180,8 @@
 }
 
 .ProductColor {
-  text-transform: capitalize;
   border: 0;
+  text-transform: capitalize;
 
   &--white {
     border: 2px solid $light-gray;
@@ -259,9 +259,15 @@
 
 // When rendered as a single page
 .Product--single {
-  background-color: $white;
-  padding: 20px;
+  //background-color: $white;
+  //padding: 20px;
+  padding: 0;
   width: 100%;
+
+  .ProductWrapper {
+    background-color: $white;
+    padding: 20px;
+  }
 
   .ProductTitle {
     // TODO: does it look good?
@@ -269,16 +275,16 @@
   }
 
   .ProductMain {
-    width: 50%;
     float: left;
     max-width: 500px;
     padding: 0;
+    width: 50%;
   }
 
   .ProductInfo {
-    width: 50%;
     float: left;
     padding: 0 0 0 20px;
+    width: 50%;
   }
 
   .ProductDescription {
