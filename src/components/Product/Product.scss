@@ -263,6 +263,11 @@
   padding: 20px;
   width: 100%;
 
+  .ProductTitle {
+    // TODO: does it look good?
+    font-family: $oswald;
+  }
+
   .ProductMain {
     width: 50%;
     float: left;
