@@ -13,6 +13,9 @@ import Home from './components.pages/Home';
 import Single from './components.pages/Single';
 
 import './main.scss';
+import './core/array-prototype-find-polyfill';
+
+require('es6-promise').polyfill();
 
 const FourOhFour = () => <h1>404</h1>;
 
